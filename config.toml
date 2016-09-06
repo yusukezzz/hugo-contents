@@ -1,0 +1,141 @@
+baseurl = "http://yusukezzz.net"
+disablePathToLower = false
+languageCode = "ja-jp"
+title = "yusukezzz weblog"
+theme = "hugo-octopress"
+hasCJKLanguage = true
+
+# number of blog posts displayed in each page
+paginate = 5
+
+pygmentsuseclasses = false
+pygmentsstyle = "solarized_dark"
+
+# you need to install Solarized from https://github.com/john2x/solarized-pygment.git
+# Octopress blog used Solarized_dark
+# options are solarized_dark (octopress), solarized_dark256 and default (solarized light)
+
+# will make the highlight shortcode and ``` do the same thing - otherwise they are treated differently and we do not want that
+pygmentscodefences = true
+
+# can pass in pygments options here, it can also be added in the highlight shortcode
+# pygmentsoptions = "linenos=true"
+
+[permalinks]
+post = "/blog/:year/:month/:day/:slug"
+
+# make tags and categories work
+[indexes]
+  tag = "tags"
+  category = "categories"
+
+# menu
+# links will open in a new window except links to "/" - links are added to navigation in hugo-octopress/layouts/partials/navigation.html
+[[menu.main]]
+  Name = "Top"
+  URL = "/"
+  weight = 0
+
+[[menu.main]]
+  Name = "Github"
+  URL = "https://github.com/yusukezzz"
+  weight = 1
+
+
+# sidebar menus
+# enable with "sidebar_menu_enabled = true" in [params]
+# header text is "sidebar_menu_header" in [params]
+[[menu.sidebar]]
+  Name = "Google"
+  URL = "https://www.google.com"
+  weight = 0
+
+[[menu.sidebar]]
+  Name = "Hugo"
+  URL = "/categories/hugo/"
+  weight = 1
+
+[[menu.sidebar]]
+  Name = "Homepage"
+  URL = "/"
+  weight = 2
+
+[params]
+
+  # number of recent posts that will be shown in the sidebar - set to 0 or remove to hide this section
+  sidebarRecentLimit = 5
+
+  # sidebar customization - passed to markdownify
+  sidebar_header = "About"
+
+  # sidebar text supports markdown
+  # new lines can be added with </br> or normal markdown (two spaces at the end of line or two new lines).
+  # when adding two new lines, remember to remove the indentation otherwise the new line will be treated as a codeblock
+  sidebar_text = """<img width="96px" height="96px" src="/img/profile_square.jpg"><br/>
+  yusukezzz<br/>
+  ぷろぐらむとか。
+  """
+
+  # sidebar menu
+  # if true will add a sidebar menu between sidebar text and recent posts
+  sidebar_menu_enabled = false
+  sidebar_menu_header = "Links"
+
+  # if false, all of the post will appear on front page (and in pagination)
+  truncate = true
+
+  # author's name (this will appear in metadata and under posts)
+  author = "yusukezzz"
+
+  # appears in the site header under website title
+  subtitle = ""
+
+  # used in the search engine
+  search_engine_url = "https://www.google.com/search"
+
+  # Text of the Continue Reading label. &rarr; == right arrow, but it gets messed up in the string so we will add it to index.html manually
+  continue_reading = "続きを読む"
+
+  # Google analytics code
+  googleAnalytics = "google analytics"
+
+  # disqus shortcode
+  # disable comments for a specific post by adding "comments: false" in its frontmatter
+  disqusShortname = "Your Google Analytics tracking code"
+
+  # sidebar links
+  github = "https://github.com/yusukezzz"
+  bitbucket = ""
+  twitter = "https://twitter.com/yusukezzz"
+  keybase = ""
+  stackoverflow = ""
+  linkedin = ""
+  googleplus = ""
+  youtube = ""
+  facebook = ""
+
+  rss = true  # switch to true to enable RSS icon link
+
+  # set to true to use a text label for RSS instead of an icon
+  # this is overwritten by the `rss` setting
+  textrss = false
+
+  defaultDescription = ""
+
+  # populate this with your own keywords
+  # defaultKeywords = ["keyword1" , "keyword2" , "keyword3" , "keyword4"]
+
+  # css override files
+  # paths should be relative to the `static` directory (either the website static directory or the theme one)
+  # custom_css = ["css/custom.css","css/custom2.css"]
+
+  # 404.html header and text -both support markdown
+  notfound_header = "ページが見つかりません"
+
+  notfound_text = "ページを戻るかメニュー/サイドバーから探して下さい"
+
+  # Set to true to hide ReadingTime on posts
+  disableReadingTime = true
+
+  # Set to true to disable downloading of remote Google fonts
+  disableGoogleFonts = false
