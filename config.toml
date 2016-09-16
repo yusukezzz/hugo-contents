@@ -1,4 +1,4 @@
-baseurl = "http://yusukezzz.net"
+baseurl = "http://www.yusukezzz.net"
 disablePathToLower = false
 languageCode = "ja-jp"
 title = "yusukezzz weblog"
@@ -25,7 +25,7 @@ pygmentscodefences = true
 post = "/blog/:year/:month/:day/:slug"
 
 # make tags and categories work
-[indexes]
+[taxonomies]
   tag = "tags"
   category = "categories"
 
